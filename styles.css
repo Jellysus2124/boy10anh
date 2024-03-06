@@ -1,0 +1,141 @@
+/* General styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9e0d2; /* Light peach background */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Login form styles */
+#login-form {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#login-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #66494e; /* Dark peach text color */
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+  width: 300px; /* Adjust width for better fit */
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #d8c3bb; /* Light peach border */
+}
+
+/* Login button styles */
+#login-form button {
+  display: block;
+  width: 200px; /* Adjust width for better fit */
+  margin: 0 auto; /* Center the button */
+  padding: 10px; /* Adjust padding for better fit */
+  background-color: #e96a68; /* Coral button color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px; /* Space below the button */
+}
+
+#login-form button:hover {
+  background-color: #cc5c5a; /* Darker coral color on hover */
+}
+
+/* Main content styles */
+#main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px; /* Adjust margin for better alignment */
+}
+
+#text-content {
+  text-align: center;
+  font-size: 20px;
+  color: #66494e; /* Dark peach text color */
+  margin: 50px 0;
+}
+
+/* Image gallery styles */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+/* Image container styles */
+.image {
+  margin: 20px; /* Add space gap around each image */
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px; /* Increase border radius for a softer look */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+/* Image styles */
+.image img {
+  width: 100%; /* Ensure images fill the container */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+/* View more button styles */
+/* View more button styles */
+.view-more {
+  margin-top: 10px; /* Add space gap between image and "View more" button */
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue button color */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth button hover effect */
+}
+
+.view-more:hover {
+  background-color: #0056b3; /* Darker blue color on hover */
+}
+
+/* Hidden description styles */
+/* Hidden description styles */
+.description {
+  margin-top: 10px; /* Add space gap between "View more" button and description */
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  color: #fff; /* White text color */
+  transition: opacity 0.3s ease; /* Smooth transition */
+}
+/* Show hidden description when "View more" is clicked */
+.image.active .description {
+  display: block;
+}
+
+/* Transition effect on image hover */
+.image:hover img {
+  transform: scale(1.05); /* Enlarge image on hover */
+}
+
+@media (max-width: 768px) {
+  .image-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
